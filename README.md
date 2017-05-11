@@ -1,10 +1,10 @@
 # API Envio de Mensajes SMS
 
-API para integración del servicio de SMS a cualquier sistema informático.
+Manual técnico para la integración del servicio de SMS a cualquier sistema informático haciendo uso de la API destinada para este fin.
 
 ## Metodo GET Autenticación de usuario
 
-http://api.enviosms.com.mx:8083/v1/auth/<b>usuario</b>/<password>
+http://api.enviosms.com.mx:8083/v1/auth/<b>usuario</b>/<b>password</b>
 
 JavaScript:
 ```javascript
@@ -30,7 +30,7 @@ Content-Typeapplication/json
 {
   "status": true,
   "code": 1002,
-  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiZGF2aWRsIiwicGFzdyI6IiQyYSQxMCRFc2V2OXN1Z2duQ21HMFFQWjZCQVplUjZKSFo0R0c3NG9GSlZxOWtYTlIySGlCTUNkaGh5SyJ9.r0f8ZMlPzJsSEBJD_YXw7ZBtEmCLMwG98oL8AqRhqgU"
+  "token": "48dueXAiOiJKV1QiLCJhbGciOiJIUzI1Nhssudy9.eyJ1c2VyIjoiZGF2aWRsIiwicGFzdyI6IiQyYS3434RFc2V2OXN1Z2duQ21HMFFQWjZCQVplUjZKSFo0R0c3NG9GSlZxOWtYTlIySGlCTUNkaGh5SyJ9.r0f8ZsdsdPzJsSEBJD_YXw7ZBtEmCLMwG98oL8AqRhqgU"
 }
 ```
 ### Descripción de parámetros de entrada
@@ -41,7 +41,7 @@ password | Constraseña de acceso
 
 ## Metodo GET Obtener datos de usuario
 
-http://api.enviosms.com.mx:8083/v1/user/<token>
+http://api.enviosms.com.mx:8083/v1/user/<b>token</b>
 
 JavaScript:
 ```javascript
@@ -68,8 +68,8 @@ Content-Typeapplication/json
   "status": true,
   "code": 1000,
   "usuario": "prueba",
-  "apik": "O3474LA1",
-  "apis": "CZYAXVDC5QXFVZ",
+  "apik": "O347AAA1",
+  "apis": "CZYAADC3QXFVZ",
   "balance": 10,
   "price": 0.1,
   "nivel": 1
@@ -82,7 +82,7 @@ token | Token de usuario
 
 ## Metodo POST Enviar mensaje
 
-http://api.enviosms.com.mx:8083/v1/sms/<apikey>/<apisecret>
+http://api.enviosms.com.mx:8083/v1/sms/<b>apikey</b>/<b>apisecret</b>
 
 JavaScript:
 ```javascript
