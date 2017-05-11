@@ -1,4 +1,0 @@
----
-title: "Eliminar usuario"
-excerpt: ""
----
