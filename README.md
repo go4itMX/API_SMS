@@ -23,6 +23,11 @@ xhr.open("GET", "http://api.enviosms.com.mx__start_key__8083__end__/v1/auth/usua
 
 xhr.send(data);
 ```
+### Descripción de parámetros de entrada
+Parámetro | Descripción
+--- | ---
+usuario | Nombre de usuario
+password | Constraseña de acceso
 
 Respuesta:
 Content-Typeapplication/json
@@ -33,12 +38,6 @@ Content-Typeapplication/json
   "token": "48dueXAiOiJKV1QiLCJhbGciOiJIUzI1Nhssudy9.eyJ1c2VyIjoiZGF2aWRsIiwicGFzdyI6IiQyYS3434RFc2V2OXN1Z2duQ21HMFFQWjZCQVplUjZKSFo0R0c3NG9GSlZxOWtYTlIySGlCTUNkaGh5SyJ9.r0f8ZsdsdPzJsSEBJD_YXw7ZBtEmCLMwG98oL8AqRhqgU"
 }
 ```
-### Descripción de parámetros de entrada
-Parámetro | Descripción
---- | ---
-usuario | Nombre de usuario
-password | Constraseña de acceso
-
 ## Metodo GET Obtener datos de usuario
 
 http://api.enviosms.com.mx:8083/v1/user/<b>token</b>
@@ -60,6 +59,10 @@ xhr.open("GET", "http://api.enviosms.com.mx__start_key__8083__end__/v1/user/toke
 
 xhr.send(data);
 ```
+### Descripción de parámetros de entrada
+Parámetro | Descripción
+--- | ---
+token | Token de usuario
 
 Respuesta:
 Content-Typeapplication/json
@@ -75,10 +78,6 @@ Content-Typeapplication/json
   "nivel": 1
 }
 ```
-### Descripción de parámetros de entrada
-Parámetro | Descripción
---- | ---
-token | Token de usuario
 
 ## Metodo POST Enviar mensaje
 
@@ -101,6 +100,13 @@ xhr.open("POST", "http://api.enviosms.com.mx__start_key__8083__end__/v1/sms/apik
 
 xhr.send(data);
 ```
+### Descripción de parámetros de entrada
+Parámetro | Descripción
+--- | ---
+apikey | API Key
+apisecret | API Secret
+to | Numero destino
+text | Texto del mensaje
 
 Respuesta:
 Content-Typeapplication/json
@@ -112,13 +118,6 @@ Content-Typeapplication/json
   mensaje: 'Envió en proceso'
 }
 ```
-### Descripción de parámetros de entrada
-Parámetro | Descripción
---- | ---
-apikey | API Key
-apisecret | API Secret
-to | Numero destino
-text | Texto del mensaje
 
 ### Ejemplos en vivo
 [Ir a la página principal del servicio](http://enviosms.com.mx)
