@@ -2,7 +2,7 @@
 
 Manual técnico para la integración del servicio de SMS a cualquier sistema informático haciendo uso de la API destinada para este fin.
 
-## Metodo GET Autenticación de usuario
+## Metodo GET - Autenticación de usuario
 
 http://api.enviosms.com.mx:8083/v1/auth/<b>usuario</b>/<b>password</b>
 
@@ -38,7 +38,7 @@ Content-Typeapplication/json
   "token": "48dueXAiOiJKV1QiLCJhbGciOiJIUzI1Nhssudy9.eyJ1c2VyIjoiZGF2aWRsIiwicGFzdyI6IiQyYS3434RFc2V2OXN1Z2duQ21HMFFQWjZCQVplUjZKSFo0R0c3NG9GSlZxOWtYTlIySGlCTUNkaGh5SyJ9.r0f8ZsdsdPzJsSEBJD_YXw7ZBtEmCLMwG98oL8AqRhqgU"
 }
 ```
-## Metodo GET Obtener datos de usuario
+## Metodo GET - Obtener datos de usuario
 
 http://api.enviosms.com.mx:8083/v1/user/<b>token</b>
 
@@ -79,7 +79,7 @@ Content-Typeapplication/json
 }
 ```
 
-## Metodo POST Enviar mensaje
+## Metodo POST - Enviar mensaje SMS
 
 http://api.enviosms.com.mx:8083/v1/sms/<b>apikey</b>/<b>apisecret</b>
 
