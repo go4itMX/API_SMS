@@ -2,76 +2,35 @@
 
 API para integración del servicio de SMS a cualquier sistema informático.
 
-## Integración utilizando HTML
+## Metodo GET Autenticación de usuario
 
-Para integrar utilizando sólo HTML, utiliza el siguiente formato:
+http://go4it.supportdesk.com.mx:8083/v1/auth/usuario/password
+
+JavaScript:
 ```html
-<script
-    type="text/javascript"
-    src="https://sw.banwire.com/checkout.js"
-    data-sandbox="true" 
-    data-user="pruebasbw" 
-    data-total="500.00" 
-    data-cust-fname="Ricardo" 
-    data-cust-mname="Gamba" 
-    data-cust-lname="Lavin" 
-    data-cust-email="prueba@banwire.com" 
-    data-success-page="http://google.com" 
-    data-error-page="http://facebook.com" 
-    data-pending-page="http://yahoo.com" 
-    data-concept="Concepto de pago" 
-    data-reference="Referencia de pago" 
-    data-notify-url="https://test.banwire.com/sw/examples/response.php" 
-    data-button-caption="Pagar ahora" 
-    data-button-class="btn-pay">
-</script>
+var data = JSON.stringify(false);
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("GET", "http://go4it.supportdesk.com.mx__start_key__8083__end__/v1/auth/usuario/password");
+
+xhr.send(data);
 ```
 
-Para una integración más personalizada se pueden utilizar parámetros adicionales (opcionales):
+Respuesta:
 ```html
-<script
-    type="text/javascript"
-    src="https://sw.banwire.com/checkout.js"
-    data-sandbox="true" 
-    data-user="pruebasbw" 
-    data-title="Mi Comercio" 
-    data-total="500.00" 
-    data-payment-options="visa,amex" 
-    data-review-order="true" 
-    data-loading-text="Espere..."
-    data-success-page="https://test.banwire.com/sw/examples" 
-    data-notify-url="https://test.banwire.com/sw/examples/response.php" 
-    data-error-page="http://facebook.com"  
-    data-pending-page="http://yahoo.com" 
-    data-concept="Concepto de pago" 
-    data-reference="Referencia de pago" 
-    data-months="3,6,9,12" 
-    data-currency="MXN" 
-    data-exchange-rate="" 
-    data-cust-fname="Ricardo" 
-    data-cust-mname="Gamba" 
-    data-cust-lname="Lavin" 
-    data-cust-email="prueba@banwire.com" 
-    data-cust-phone="55555555" 
-    data-cust-addr="Circuito fuentes del pedregal 440 10" 
-    data-cust-zip="14140" 
-    data-cust-city="Mexico" 
-    data-cust-country="MEX" 
-    data-cust-state="DF"  
-    data-ship-addr="Direccion de envio" 
-    data-ship-zip="13145" 
-    data-ship-city="Mexico" 
-    data-ship-country="MX" 
-    data-ship-state="DF" 
-    data-button-caption="Pagar ahora" 
-    data-button-class="btn-pay"
-    data-item-1-name="Primero" 
-    data-item-1-price="100.00" 
-    data-item-1-qty="2" 
-    data-item-2-name="Segundo" 
-    data-item-2-price="100.00" 
-    data-item-2-qty="3"> /
-</script>
+{
+  "status": true,
+  "code": 1002,
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiZGF2aWRsIiwicGFzdyI6IiQyYSQxMCRFc2V2OXN1Z2duQ21HMFFQWjZCQVplUjZKSFo0R0c3NG9GSlZxOWtYTlIySGlCTUNkaGh5SyJ9.r0f8ZMlPzJsSEBJD_YXw7ZBtEmCLMwG98oL8AqRhqgU"
+}
 ```
 ### Descripción de parámetros
 Parámetro | Descripción
