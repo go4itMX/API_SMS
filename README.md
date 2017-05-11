@@ -29,7 +29,7 @@ Parámetro | Descripción
 usuario | Nombre de usuario
 password | Constraseña de acceso
 
-Respuesta:
+Ejemplo Respuesta:
 Content-Typeapplication/json
 ```javascript
 {
@@ -64,7 +64,7 @@ Parámetro | Descripción
 --- | ---
 token | Token de usuario
 
-Respuesta:
+Ejemplo Respuesta:
 Content-Typeapplication/json
 ```javascript
 {
@@ -108,7 +108,7 @@ apisecret | API Secret
 to | Numero destino
 text | Texto del mensaje
 
-Respuesta:
+Ejemplo Respuesta:
 Content-Typeapplication/json
 ```javascript
 { 
