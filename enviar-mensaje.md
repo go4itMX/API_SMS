@@ -1,4 +1,0 @@
----
-title: "Enviar mensaje"
-excerpt: ""
----
