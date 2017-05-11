@@ -40,7 +40,7 @@ password | Constraseña de acceso
 
 ## Metodo GET Obtener datos de usuario
 
-http://go4it.supportdesk.com.mx:8083/v1/user/token
+http://go4it.supportdesk.com.mx:8083/v1/token
 
 JavaScript:
 ```javascript
