@@ -4,7 +4,7 @@ API para integración del servicio de SMS a cualquier sistema informático.
 
 ## Metodo GET Autenticación de usuario
 
-http://api.enviosms.com.mx:8083/v1/auth/usuario/password
+http://api.enviosms.com.mx:8083/v1/auth/<usuario>/<password>
 
 JavaScript:
 ```javascript
@@ -41,7 +41,7 @@ password | Constraseña de acceso
 
 ## Metodo GET Obtener datos de usuario
 
-http://api.enviosms.com.mx:8083/v1/token
+http://api.enviosms.com.mx:8083/v1/user/<token>
 
 JavaScript:
 ```javascript
@@ -82,7 +82,7 @@ token | Token de usuario
 
 ## Metodo POST Enviar mensaje
 
-http://api.enviosms.com.mx:8083/v1/sms/apikey/apisecret
+http://api.enviosms.com.mx:8083/v1/sms/<apikey>/<apisecret>
 
 JavaScript:
 ```javascript
