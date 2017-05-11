@@ -1,4 +1,4 @@
-# SMS Go4IT API
+# API Envio de Mensajes SMS
 
 API para integración del servicio de SMS a cualquier sistema informático.
 
@@ -237,7 +237,7 @@ function pagar() {
 ```
 
 ### Ejemplos en vivo
-[Ir a la página de ejemplos en vivo](https://test.banwire.com/sw_ex)
+[Ir a la página principal del servicio](http://enviosms.com.mx)
 
 ## Hash de Seguridad
 El parámetro 'hash' es un valor cifrado con el algoritmo SHA256 mediante una clave específica (API-SECRET) usando el método HMAC. Este parámetro se utilizará para poder verificar que el emisor de la notificación recibida está autorizado por el receptor, éste último deberá validar el parámetro Hash, asegurándose que el valor cifrado coincida con el que él calcula.
