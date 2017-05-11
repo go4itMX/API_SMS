@@ -1,7 +1,6 @@
-# BanWire Javascript SDK
+# SMS Go4IT API
 
-SDK para integración de BanWire Pago Pro con ReD.
-Revisar los archivos en la carpeta examples para ver los métodos de integración.
+API para integración del servicio de SMS a cualquier sistema informático.
 
 ## Integración utilizando HTML
 
