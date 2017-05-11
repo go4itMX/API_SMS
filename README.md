@@ -4,7 +4,7 @@ API para integración del servicio de SMS a cualquier sistema informático.
 
 ## Metodo GET Autenticación de usuario
 
-http://go4it.supportdesk.com.mx:8083/v1/auth/usuario/password
+http://api.enviosms.com.mx:8083/v1/auth/usuario/password
 
 JavaScript:
 ```javascript
@@ -19,7 +19,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "http://go4it.supportdesk.com.mx__start_key__8083__end__/v1/auth/usuario/password");
+xhr.open("GET", "http://api.enviosms.com.mx__start_key__8083__end__/v1/auth/usuario/password");
 
 xhr.send(data);
 ```
@@ -40,7 +40,7 @@ password | Constraseña de acceso
 
 ## Metodo GET Obtener datos de usuario
 
-http://go4it.supportdesk.com.mx:8083/v1/token
+http://api.enviosms.com.mx:8083/v1/token
 
 JavaScript:
 ```javascript
@@ -55,7 +55,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "http://go4it.supportdesk.com.mx__start_key__8083__end__/v1/user/token");
+xhr.open("GET", "http://api.enviosms.com.mx__start_key__8083__end__/v1/user/token");
 
 xhr.send(data);
 ```
@@ -80,7 +80,7 @@ token | Token de usuario
 
 ## Metodo POST Enviar mensaje
 
-http://go4it.supportdesk.com.mx:8083/v1/sms/apikey/apisecret
+http://api.enviosms.com.mx:8083/v1/sms/apikey/apisecret
 
 JavaScript:
 ```javascript
@@ -95,7 +95,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", "http://go4it.supportdesk.com.mx__start_key__8083__end__/v1/sms/apikey/apisecret");
+xhr.open("POST", "http://api.enviosms.com.mx__start_key__8083__end__/v1/sms/apikey/apisecret");
 
 xhr.send(data);
 ```
@@ -125,4 +125,4 @@ El parámetro 'hash' es un valor cifrado con el algoritmo SHA256 mediante una cl
 
 Todas las Respuestas y Notificaciones que son enviadas desde BanWire en los diferentes eventos del proceso de Secure Window incluyen el parámetro 'hash'.
 
-API-SECRET es un valor único que se genera de forma aleatoria para cada cuenta de BanWire que se encuentran utilizando el API de Secure Window. BanWire sólo revelará ésta información al usuario autorizado de la cuenta (el manejo de ésta información quedará bajo responsabilidad y propio riesgo del usuario). Si se cree o se sabe que ésta información se conoce por un  tercera o sufre algún tipo de riesgo, se debe informar inmediatamente a BanWire para que se pueda generar y proporcionar una nueva API-SECRET. Ésta información se proporcionará una vez el usuario tenga su proceso administrativo terminado, lo que incluye la firma del contrato con BanWire.
+API-SECRET es un valor único que se genera de forma aleatoria para cada cuenta que se encuentran utilizando el API de Secure Window. Go4IT sólo revelará ésta información al usuario autorizado de la cuenta (el manejo de ésta información quedará bajo responsabilidad y propio riesgo del usuario). Si se cree o se sabe que ésta información se conoce por un  tercera o sufre algún tipo de riesgo, se debe informar inmediatamente a BanWire para que se pueda generar y proporcionar una nueva API-SECRET. Ésta información se proporcionará una vez el usuario tenga su proceso administrativo terminado, lo que incluye la firma del contrato con Go4IT.
