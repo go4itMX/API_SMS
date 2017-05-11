@@ -25,6 +25,7 @@ xhr.send(data);
 ```
 
 Respuesta:
+Content-Typeapplication/json
 ```javascript
 {
   "status": true,
@@ -61,6 +62,7 @@ xhr.send(data);
 ```
 
 Respuesta:
+Content-Typeapplication/json
 ```javascript
 {
   "status": true,
@@ -101,6 +103,7 @@ xhr.send(data);
 ```
 
 Respuesta:
+Content-Typeapplication/json
 ```javascript
 { 
   status: true, 
