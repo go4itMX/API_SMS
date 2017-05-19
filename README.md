@@ -171,7 +171,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\n    to: \"4491259348\",\n    text: \"Hola mijo\"\n}",
+  CURLOPT_POSTFIELDS => "{\n    to: \"5555555555\",\n    text: \"CoNTENIDO MENSAJE TEXTO\"\n}",
 ));
 
 $response = curl_exec($curl);
@@ -192,7 +192,7 @@ Parámetro | Descripción
 apikey | API Key
 apisecret | API Secret
 to | Numero destino
-text | Texto del mensaje
+text | Texto del mensaje (Max 509 caracteres)
 
 Ejemplo Respuesta:
 Content-Typeapplication/json
