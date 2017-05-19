@@ -23,6 +23,34 @@ xhr.open("GET", "http://api.enviosms.com.mx__start_key__8083__end__/v1/auth/usua
 
 xhr.send(data);
 ```
+JavaScript:
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_PORT => "8083",
+  CURLOPT_URL => "http://localhost:8083/v1/auth/davidl/prensa1811/",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
 ### Descripción de parámetros de entrada
 Parámetro | Descripción
 --- | ---
@@ -99,34 +127,6 @@ xhr.addEventListener("readystatechange", function () {
 xhr.open("POST", "http://api.enviosms.com.mx__start_key__8083__end__/v1/sms/apikey/apisecret");
 
 xhr.send(data);
-```
-JavaScript:
-```php
-<?php
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_PORT => "8083",
-  CURLOPT_URL => "http://localhost:8083/v1/auth/davidl/prensa1811/",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $response;
-}
 ```
 
 ### Descripción de parámetros de entrada
