@@ -6,6 +6,12 @@ Manual técnico para la integración del servicio de SMS a cualquier sistema inf
 
 http://api.enviosms.com.mx:8083/v1/auth/<b>usuario</b>/<b>password</b>
 
+### Descripción de parámetros de entrada
+Parámetro | Descripción
+--- | ---
+usuario | Nombre de usuario
+password | Constraseña de acceso
+
 JavaScript:
 ```javascript
 var data = JSON.stringify(false);
@@ -51,11 +57,6 @@ if ($err) {
   echo $response;
 }
 ```
-### Descripción de parámetros de entrada
-Parámetro | Descripción
---- | ---
-usuario | Nombre de usuario
-password | Constraseña de acceso
 
 Ejemplo Respuesta:
 Content-Typeapplication/json
@@ -69,6 +70,11 @@ Content-Typeapplication/json
 ## Metodo GET - Obtener datos de usuario
 
 http://api.enviosms.com.mx:8083/v1/user/<b>token</b>
+
+### Descripción de parámetros de entrada
+Parámetro | Descripción
+--- | ---
+token | Token de usuario
 
 JavaScript:
 ```javascript
@@ -115,10 +121,6 @@ if ($err) {
   echo $response;
 }
 ```
-### Descripción de parámetros de entrada
-Parámetro | Descripción
---- | ---
-token | Token de usuario
 
 Ejemplo Respuesta:
 Content-Typeapplication/json
@@ -138,6 +140,14 @@ Content-Typeapplication/json
 ## Metodo POST - Enviar mensaje SMS
 
 http://api.enviosms.com.mx:8083/v1/sms/<b>apikey</b>/<b>apisecret</b>
+
+### Descripción de parámetros de entrada
+Parámetro | Descripción
+--- | ---
+apikey | API Key
+apisecret | API Secret
+to | Numero destino
+text | Texto del mensaje (Max 509 caracteres)
 
 JavaScript:
 ```javascript
@@ -225,14 +235,6 @@ client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("app
 HttpResponseMessage response = client.PostAsync(envio, new StringContent("{to: \"" + para + "\", text: \"" + mensaje + "\"}", Encoding.UTF8)).Result;
 var respuesta = await response.Content.ReadAsStringAsync();
 ```
-
-### Descripción de parámetros de entrada
-Parámetro | Descripción
---- | ---
-apikey | API Key
-apisecret | API Secret
-to | Numero destino
-text | Texto del mensaje (Max 509 caracteres)
 
 Ejemplo Respuesta:
 Content-Typeapplication/json
