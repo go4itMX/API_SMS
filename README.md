@@ -149,6 +149,18 @@ apisecret | API Secret
 to | Numero destino
 text | Texto del mensaje (Max 509 caracteres)
 
+### Headers
+Header | Valor
+--- | ---
+Content-Type | Aplication/JSON
+
+### Body
+Json formado como se muestra a continuación
+Nombre | Valor | Tipo de dato
+--- | --- | ---
+to | Número a 10 dígitos | string
+text | Texto SMS | string
+
 JavaScript:
 ```javascript
 var data = JSON.stringify(false);
