@@ -157,7 +157,7 @@ code | Código | int
 usuario | Nombre de usuario | string
 apik | APIKEY | string
 apis | APISECRET | string
-balance | Crédito restante | int
+balance | Crédito restante | float
 price | Precio por mensaje | float
 nivel | Nivel de usuario | int
 
