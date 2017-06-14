@@ -245,8 +245,7 @@ if ($err) {
   echo $response;
 }
 ```
-C#:
-OPCION SÍNCRONA:
+C# (SÍNCRONO):
 ```c#
 var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET");
 var postData = "{\"to\":\"NUMERO_CELULAR\", \"text\":\"MENSAJE\"}";           
@@ -264,7 +263,7 @@ using (var stream = request.GetRequestStream())
 var response = (HttpWebResponse)request.GetResponse();
 var responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
 ```
-OPCION ASÍNCRONA:
+C# (ASÍNCRONO):
 ```c#
 string result = "";
 string url = "http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET";
