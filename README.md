@@ -185,6 +185,46 @@ if ($err) {
   echo $response;
 }
 ```
+C#:
+OPCION SÍNCRONA:
+```c#
+var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET");
+var postData = "{\"to\":\"NUMERO_CELULAR\", \"text\":\"MENSAJE\"}";           
+var data = Encoding.UTF8.GetBytes(postData);
+request.Method = WebRequestMethods.Http.Post;
+request.ContentType = "application/json";
+request.ContentLength = data.Length;
+request.Accept = "application/json";
+
+using (var stream = request.GetRequestStream())
+{
+    stream.Write(data, 0, data.Length);
+}
+
+var response = (HttpWebResponse)request.GetResponse();
+var responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+```
+OPCION ASÍNCRONA:
+```c#
+string result = "";
+string url = "http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET";
+string apik = "APIKEY";
+string apis = "APISECRET";
+string para = "NO_CELULAR" //a 10 dígitos
+string mensaje = "Hello World!" //Mensaje a enviar
+
+string envio = url + "/" + apik + "/" + apis + "/";
+
+HttpClient client = new HttpClient();
+
+client.BaseAddress = new Uri(envio);
+
+// Add an Accept header for JSON format.
+client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+HttpResponseMessage response = client.PostAsync(envio, new StringContent("{to: \"" + para + "\", text: \"" + mensaje + "\"}", Encoding.UTF8)).Result;
+var respuesta = await response.Content.ReadAsStringAsync();
+```
 
 ### Descripción de parámetros de entrada
 Parámetro | Descripción
