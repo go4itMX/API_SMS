@@ -154,8 +154,7 @@ Header | Valor
 --- | ---
 Content-Type | Aplication/JSON
 
-### Body
-Json formado como se muestra a continuación
+### Body (JSON)
 Nombre | Valor | Tipo de dato
 --- | --- | ---
 to | Número a 10 dígitos | string
