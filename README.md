@@ -58,6 +58,23 @@ if ($err) {
 }
 ```
 
+C#:
+```c#
+var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/auth/USUARIO/PASSWORD");
+request.Method = WebRequestMethods.Http.Get;
+request.ContentType = "application/json";
+request.Accept = "application/json";
+var response = (HttpWebResponse)request.GetResponse();
+var responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+```
+
+### Descripción de parámetros de salida (JSON)
+Parámetro | Descripción | Tipo de dato
+--- | --- | ---
+status | Estatus de la respuesta | boolean
+code | Código | int
+token | Token | string
+
 Ejemplo Respuesta:
 Content-Type: application/json
 ```javascript
@@ -121,6 +138,28 @@ if ($err) {
   echo $response;
 }
 ```
+
+C#:
+```c#
+var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/user/TOKEN");
+request.Method = WebRequestMethods.Http.Get;
+request.ContentType = "application/json";
+request.Accept = "application/json";
+var response = (HttpWebResponse)request.GetResponse();
+var responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+```
+
+### Descripción de parámetros de salida (JSON)
+Parámetro | Descripción | Tipo de dato
+--- | --- | ---
+status | Estatus de la respuesta | boolean
+code | Código | int
+usuario | Nombre de usuario | string
+apik | APIKEY | string
+apis | APISECRET | string
+balance | Crédito restante | int
+price | Precio por mensaje | float
+nivel | Nivel de usuario | int
 
 Ejemplo Respuesta:
 Content-Type: application/json
@@ -246,6 +285,15 @@ client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("app
 HttpResponseMessage response = client.PostAsync(envio, new StringContent("{to: \"" + para + "\", text: \"" + mensaje + "\"}", Encoding.UTF8)).Result;
 var respuesta = await response.Content.ReadAsStringAsync();
 ```
+
+### Descripción de parámetros de salida (JSON)
+Parámetro | Descripción | Tipo de dato
+--- | --- | ---
+status | Estatus de la respuesta | boolean
+tipo | tipo de mensaje | int
+code | Código de respuesta | int
+mensaje | Respuesta de la API del estatus del mensaje | string
+
 
 Ejemplo Respuesta:
 Content-Type: application/json
