@@ -59,7 +59,7 @@ if ($err) {
 ```
 
 Ejemplo Respuesta:
-Content-Typeapplication/json
+Content-Type: application/json
 ```javascript
 {
   "status": true,
@@ -123,7 +123,7 @@ if ($err) {
 ```
 
 Ejemplo Respuesta:
-Content-Typeapplication/json
+Content-Type: application/json
 ```javascript
 {
   "status": true,
@@ -237,7 +237,7 @@ var respuesta = await response.Content.ReadAsStringAsync();
 ```
 
 Ejemplo Respuesta:
-Content-Typeapplication/json
+Content-Type: application/json
 ```javascript
 { 
   status: true, 
