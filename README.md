@@ -58,7 +58,7 @@ if ($err) {
 }
 ```
 
-C#:
+C# (Framework >=2.0):
 ```c#
 //Este código funciona para Framework >=2.0
 var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/auth/USUARIO/PASSWORD");
@@ -140,7 +140,7 @@ if ($err) {
 }
 ```
 
-C#:
+C# (Framework >=2.0):
 ```c#
 //Este código funciona para Framework >=2.0
 var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/user/TOKEN");
@@ -247,7 +247,7 @@ if ($err) {
   echo $response;
 }
 ```
-C# (Síncrono):
+C# (Framework >=2.0) (Síncrono):
 ```c#
 //Este código funciona para Framework >=2.0
 var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET");
@@ -266,7 +266,7 @@ using (var stream = request.GetRequestStream())
 var response = (HttpWebResponse)request.GetResponse();
 var responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
 ```
-C#  (Asíncrono):
+C# (Framework >=4.6) (Asíncrono):
 ```c#
 //Este código funciona para Framework >=4.6
 string result = "";
