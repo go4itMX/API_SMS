@@ -60,6 +60,7 @@ if ($err) {
 
 C#:
 ```c#
+//Este código funciona para Framework >=2.0
 var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/auth/USUARIO/PASSWORD");
 request.Method = WebRequestMethods.Http.Get;
 request.ContentType = "application/json";
@@ -141,6 +142,7 @@ if ($err) {
 
 C#:
 ```c#
+//Este código funciona para Framework >=2.0
 var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/user/TOKEN");
 request.Method = WebRequestMethods.Http.Get;
 request.ContentType = "application/json";
