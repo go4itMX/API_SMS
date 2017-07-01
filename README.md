@@ -170,19 +170,19 @@ var responseString = new System.IO.StreamReader(response.GetResponseStream()).Re
 
 Java
 ```java
-URL url = new URL("http://localhost:8083/v1/user/TOKEN");
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.setRequestMethod("GET");
-			conn.setRequestProperty("ContentType", "application/json");
-			conn.setRequestProperty("Accept", "application/json");
-			
-			if (conn.getResponseCode() != 200) {
-				throw new RuntimeException("Failed : HTTP error code : "
-						+ conn.getResponseCode());
-			}
+URL url = new URL("http://api.enviosms.com.mx:8083/v1/user/TOKEN");
+HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+conn.setRequestMethod("GET");
+conn.setRequestProperty("ContentType", "application/json");
+conn.setRequestProperty("Accept", "application/json");
 
-			BufferedReader br = new BufferedReader(new InputStreamReader(
-				(conn.getInputStream())));
+if (conn.getResponseCode() != 200) {
+	throw new RuntimeException("Failed : HTTP error code : "
+			+ conn.getResponseCode());
+}
+
+BufferedReader br = new BufferedReader(new InputStreamReader(
+	(conn.getInputStream())));
 ```
 
 ### Descripción de parámetros de salida (JSON)
