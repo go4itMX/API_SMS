@@ -69,6 +69,23 @@ var response = (HttpWebResponse)request.GetResponse();
 var responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
 ```
 
+Java
+```java
+URL url = new URL("http://api.enviosms.com.mx:8083/v1/auth/USUARIO/PASSWORD");
+HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+conn.setRequestMethod("GET");
+conn.setRequestProperty("ContentType", "application/json");
+conn.setRequestProperty("Accept", "application/json");
+
+if (conn.getResponseCode() != 200) {
+  throw new RuntimeException("Failed : HTTP error code : "
+      + conn.getResponseCode());
+}
+
+BufferedReader br = new BufferedReader(new InputStreamReader(
+  (conn.getInputStream())));
+```
+
 ### Descripción de parámetros de salida (JSON)
 Parámetro | Descripción | Tipo de dato
 --- | --- | ---
@@ -149,6 +166,23 @@ request.ContentType = "application/json";
 request.Accept = "application/json";
 var response = (HttpWebResponse)request.GetResponse();
 var responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+```
+
+Java
+```java
+URL url = new URL("http://localhost:8083/v1/user/TOKEN");
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("GET");
+			conn.setRequestProperty("ContentType", "application/json");
+			conn.setRequestProperty("Accept", "application/json");
+			
+			if (conn.getResponseCode() != 200) {
+				throw new RuntimeException("Failed : HTTP error code : "
+						+ conn.getResponseCode());
+			}
+
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+				(conn.getInputStream())));
 ```
 
 ### Descripción de parámetros de salida (JSON)
@@ -287,6 +321,30 @@ client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("app
 
 HttpResponseMessage response = client.PostAsync(envio, new StringContent("{to: \"" + para + "\", text: \"" + mensaje + "\"}", Encoding.UTF8)).Result;
 var respuesta = await response.Content.ReadAsStringAsync();
+```
+
+Java
+```java
+URL url = new URL("http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET");
+String postData =  "{\"to\":\"NUMERO\", \"text\":\"MENSAJE\"}";
+HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+conn.setDoOutput(true);
+conn.setRequestMethod("POST");
+conn.setRequestProperty("ContentType", "application/json");
+conn.setRequestProperty("Accept", "application/json");
+OutputStream os = conn.getOutputStream();
+OutputStreamWriter osw = new OutputStreamWriter(os, "UTF-8");
+osw.write(postData);
+osw.flush();
+osw.close();
+
+if (conn.getResponseCode() != 200) {
+  throw new RuntimeException("Failed : HTTP error code : "
+      + conn.getResponseCode());
+}
+
+BufferedReader br = new BufferedReader(new InputStreamReader(
+  (conn.getInputStream()),"utf-8"));
 ```
 
 ### Descripción de parámetros de salida (JSON)
