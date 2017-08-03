@@ -1,6 +1,6 @@
 # API Envio de Mensajes SMS
 
-Manual técnico para la integración del servicio de SMS a cualquier sistema informático haciendo uso de la API destinada para este fin.
+Manual técnico para la integración del servicio de SMS a cualquier sistema informático haciendo uso de la API destinada para este fin (códigos de error al final).
 
 ## Metodo GET - Autenticación de usuario
 
@@ -366,6 +366,26 @@ Content-Type: application/json
   mensaje: 'Envió en proceso'
 }
 ```
+
+## Códigos de error
+
+### CÓDIGOS EXITOSOS
+Código | Descripción
+--- | --- 
+1000 | Operación exitosa
+1001 | Operación con cagargo realizada exitosamente
+1002 | Autenticación exitosa
+
+### CÓDIGOS DE ERROR
+Código | Descripción
+--- | --- 
+4000 | Error desconocido
+4001 | La longitud del parametro es incorrecta
+4002 | Credenciales inválidas
+4004 | Permisos insuficientes
+4005 | Recursos insuficientes
+4007 | Nivel insuficiente
+4010 | El número de teléfono no es válido
 
 ### Ejemplos en vivo
 [Ir a la página principal del servicio](http://enviosms.com.mx)
