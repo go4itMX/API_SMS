@@ -376,7 +376,15 @@ Código | Descripción
 1001 | Operación con cagargo realizada exitosamente
 1002 | Autenticación exitosa
 
-### CÓDIGOS DE ERROR
+### CÓDIGOS DE ERROR RESPUESTA HTTP
+Código | Descripción| Causas
+--- | --- | --- 
+400 | Petición mal formada
+401 | No Autorizado | APIK o APIS incorrectos, Permisos insuficientes
+402 | Pago Requerido | Saldo  insuficiente
+404 | Recurso no encontrado | URL incorrecta
+
+### CÓDIGOS DE ERROR JSON
 Código | Descripción
 --- | --- 
 4000 | Error desconocido
