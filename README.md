@@ -319,7 +319,7 @@ client.BaseAddress = new Uri(envio);
 // Add an Accept header for JSON format.
 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-HttpResponseMessage response = client.PostAsync(envio, new StringContent("{to: \"" + para + "\", text: \"" + mensaje + "\"}", Encoding.UTF8)).Result;
+HttpResponseMessage response = client.PostAsync(envio, new StringContent("{to: \"" + para + "\", text: \"" + mensaje + "\"}", Encoding.UTF8, "application/json")).Result;
 var respuesta = await response.Content.ReadAsStringAsync();
 ```
 
