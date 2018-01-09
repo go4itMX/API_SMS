@@ -440,7 +440,7 @@ if ($err) {
 C# (Framework >=2.0) (Síncrono):
 ```c#
 //Este código funciona para Framework >=2.0
-var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/sms/bulk/APIKEY/APISECRET");
+var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/sms/bulk/APIKEY/APISECRET/");
 var postData = "{\"to\":\"NUMERO_CELULAR1,NUMERO_CELULAR2\", \"text\":\"MENSAJE\"}";           
 var data = Encoding.UTF8.GetBytes(postData);
 request.Method = WebRequestMethods.Http.Post;
@@ -481,7 +481,7 @@ var respuesta = await response.Content.ReadAsStringAsync();
 
 Java
 ```java
-URL url = new URL("http://api.enviosms.com.mx:8083/v1/sms/bulk/APIKEY/APISECRET");
+URL url = new URL("http://api.enviosms.com.mx:8083/v1/sms/bulk/APIKEY/APISECRET/");
 String postData =  "{\"to\":\"NUMERO1,NUMERO2\", \"text\":\"MENSAJE\"}";
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setDoOutput(true);
