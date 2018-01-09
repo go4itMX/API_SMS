@@ -379,7 +379,7 @@ Código | Descripción
 ### CÓDIGOS DE ERROR RESPUESTA HTTP
 Código | Descripción| Causas
 --- | --- | --- 
-400 | Petición mal formada
+400 | Petición mal formada o error desconocido
 401 | No Autorizado | APIK o APIS incorrectos, Permisos insuficientes
 402 | Pago Requerido | Saldo  insuficiente
 404 | Recurso no encontrado | URL incorrecta
