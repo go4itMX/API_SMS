@@ -556,6 +556,7 @@ Código | Descripción
 4005 | Recursos insuficientes
 4007 | Nivel insuficiente
 4010 | El número de teléfono no es válido
+4013 | Se excedió el límite de envío bulk
 
 ### Ejemplos en vivo
 [Ir a la página principal del servicio](http://enviosms.com.mx)
