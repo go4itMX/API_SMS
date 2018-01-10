@@ -370,14 +370,14 @@ Content-Type: application/json
 
 ## Metodo POST - Enviar mensaje SMS Bulk
 
-http://api.enviosms.com.mx:8083/v1/sms/bulk/<b>apikey</b>/<b>apisecret</b>
+http://api.enviosms.com.mx:8083/v1/sms/bulk/<b>apikey</b>/<b>apisecret/</b>
 
 ### Descripción de parámetros de entrada
 Parámetro | Descripción
 --- | ---
 apikey | API Key
 apisecret | API Secret
-to | Numeros destino
+to | Numeros destino separados por comas
 text | Texto del mensaje (Max 509 caracteres)
 
 ### Headers
