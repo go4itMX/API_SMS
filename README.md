@@ -377,7 +377,7 @@ Parámetro | Descripción
 --- | ---
 apikey | API Key
 apisecret | API Secret
-to | Numeros destino separados por comas
+to | Núumeros destino separados por comas (max 1,000 Números)
 text | Texto del mensaje (Max 509 caracteres)
 
 ### Headers
