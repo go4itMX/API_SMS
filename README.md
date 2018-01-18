@@ -104,7 +104,7 @@ Content-Type: application/json
 ```
 ## Metodo GET - Obtener datos de usuario
 
-http://api.enviosms.com.mx:8083/v1/user/<b>token</b>
+http://enviosms.com.mx/api/v1/user/<b>token</b>
 
 ### Descripción de parámetros de entrada
 Parámetro | Descripción
@@ -404,7 +404,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", "https://api.enviosms.com.mx/api/v1/sms/bulk/apikey/apisecret/");
+xhr.open("POST", "https://enviosms.com.mx/api/v1/sms/bulk/apikey/apisecret/");
 
 xhr.send(data);
 ```
@@ -416,7 +416,7 @@ $curl = curl_init();
 
 curl_setopt_array($curl, array(
   //CURLOPT_PORT => "8083",
-  CURLOPT_URL => "https://api.enviosms.com.mx/api/v1/sms/bulk/APIKEY/APISECRET/",
+  CURLOPT_URL => "https://enviosms.com.mx/api/v1/sms/bulk/APIKEY/APISECRET/",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
