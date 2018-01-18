@@ -4,7 +4,7 @@ Manual técnico para la integración del servicio de SMS a cualquier sistema inf
 
 ## Metodo GET - Autenticación de usuario
 
-http://api.enviosms.com.mx:8083/v1/auth/<b>usuario</b>/<b>password</b>
+https://enviosms.com.mx/api/v1/auth/<b>usuario</b>/<b>password</b>
 
 ### Descripción de parámetros de entrada
 Parámetro | Descripción
@@ -25,7 +25,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "http://api.enviosms.com.mx__start_key__8083__end__/v1/auth/usuario/password");
+xhr.open("GET", "https://enviosms.com.mx/api/v1/auth/usuario/password");
 
 xhr.send(data);
 ```
@@ -37,7 +37,7 @@ $curl = curl_init();
 
 curl_setopt_array($curl, array(
   CURLOPT_PORT => "8083",
-  CURLOPT_URL => "http://api.enviosms.com.mx:8083/v1/auth/USUARIO/PASSWORD/",
+  CURLOPT_URL => "https://enviosms.com.mx/api/v1/auth/USUARIO/PASSWORD/",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -61,7 +61,7 @@ if ($err) {
 C# (Framework >=2.0):
 ```c#
 //Este código funciona para Framework >=2.0
-var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/auth/USUARIO/PASSWORD");
+var request = (HttpWebRequest)WebRequest.Create("https://enviosms.com.mx/api/v1/auth/USUARIO/PASSWORD");
 request.Method = WebRequestMethods.Http.Get;
 request.ContentType = "application/json";
 request.Accept = "application/json";
@@ -71,7 +71,7 @@ var responseString = new System.IO.StreamReader(response.GetResponseStream()).Re
 
 Java
 ```java
-URL url = new URL("http://api.enviosms.com.mx:8083/v1/auth/USUARIO/PASSWORD");
+URL url = new URL("https://enviosms.com.mx/api/v1/auth/USUARIO/PASSWORD");
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setRequestMethod("GET");
 conn.setRequestProperty("ContentType", "application/json");
@@ -124,7 +124,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "http://api.enviosms.com.mx__start_key__8083__end__/v1/user/token");
+xhr.open("GET", "https://enviosms.com.mx/api/v1/user/token");
 
 xhr.send(data);
 ```
@@ -135,8 +135,8 @@ PHP:
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_PORT => "8083",
-  CURLOPT_URL => "http://api.enviosms.com.mx:8083/v1/user/48dueXAiOiJKV1QiLCJhbGciOiJIUzI1Nhssudy9.eyJ1c2VyIjoiZGF2aWRsIiwicGFzdyI6IiQyYS3434RFc2V2OXN1Z2duQ21HMFFQWjZCQVplUjZKSFo0R0c3NG9GSlZxOWtYTlIySGlCTUNkaGh5SyJ9.r0f8ZsdsdPzJsSEBJD_YXw7ZBtEmCLMwG98oL8AqRhqgU",
+  //CURLOPT_PORT => "8083",
+  CURLOPT_URL => "https://enviosms.com.mx/api/v1/user/48dueXAiOiJKV1QiLCJhbGciOiJIUzI1Nhssudy9.eyJ1c2VyIjoiZGF2aWRsIiwicGFzdyI6IiQyYS3434RFc2V2OXN1Z2duQ21HMFFQWjZCQVplUjZKSFo0R0c3NG9GSlZxOWtYTlIySGlCTUNkaGh5SyJ9.r0f8ZsdsdPzJsSEBJD_YXw7ZBtEmCLMwG98oL8AqRhqgU",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -160,7 +160,7 @@ if ($err) {
 C# (Framework >=2.0):
 ```c#
 //Este código funciona para Framework >=2.0
-var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/user/TOKEN");
+var request = (HttpWebRequest)WebRequest.Create("https://enviosms.com.mx/api/v1/user/TOKEN");
 request.Method = WebRequestMethods.Http.Get;
 request.ContentType = "application/json";
 request.Accept = "application/json";
@@ -170,7 +170,7 @@ var responseString = new System.IO.StreamReader(response.GetResponseStream()).Re
 
 Java
 ```java
-URL url = new URL("http://api.enviosms.com.mx:8083/v1/user/TOKEN");
+URL url = new URL("https://enviosms.com.mx/api/v1/user/TOKEN");
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setRequestMethod("GET");
 conn.setRequestProperty("ContentType", "application/json");
@@ -214,7 +214,7 @@ Content-Type: application/json
 
 ## Metodo POST - Enviar mensaje SMS
 
-http://api.enviosms.com.mx:8083/v1/sms/<b>apikey</b>/<b>apisecret</b>
+https://enviosms.com.mx/api/v1/sms/<b>apikey</b>/<b>apisecret</b>
 
 ### Descripción de parámetros de entrada
 Parámetro | Descripción
@@ -248,7 +248,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", "http://api.enviosms.com.mx__start_key__8083__end__/v1/sms/apikey/apisecret");
+xhr.open("POST", "https://enviosms.com.mx/api/v1/sms/apikey/apisecret");
 
 xhr.send(data);
 ```
@@ -259,8 +259,8 @@ PHP:
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_PORT => "8083",
-  CURLOPT_URL => "http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET/",
+  //CURLOPT_PORT => "8083",
+  CURLOPT_URL => "https://enviosms.com.mx/api/v1/sms/APIKEY/APISECRET/",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -284,7 +284,7 @@ if ($err) {
 C# (Framework >=2.0) (Síncrono):
 ```c#
 //Este código funciona para Framework >=2.0
-var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET");
+var request = (HttpWebRequest)WebRequest.Create("https://enviosms.com.mx/api/v1/sms/APIKEY/APISECRET");
 var postData = "{\"to\":\"NUMERO_CELULAR\", \"text\":\"MENSAJE\"}";           
 var data = Encoding.UTF8.GetBytes(postData);
 request.Method = WebRequestMethods.Http.Post;
@@ -304,7 +304,7 @@ C# (Framework >=4.6) (Asíncrono):
 ```c#
 //Este código funciona para Framework >=4.6
 string result = "";
-string url = "http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET";
+string url = "https://enviosms.com.mx/api/v1/sms/APIKEY/APISECRET";
 string apik = "APIKEY";
 string apis = "APISECRET";
 string para = "NO_CELULAR" //a 10 dígitos
@@ -325,7 +325,7 @@ var respuesta = await response.Content.ReadAsStringAsync();
 
 Java
 ```java
-URL url = new URL("http://api.enviosms.com.mx:8083/v1/sms/APIKEY/APISECRET");
+URL url = new URL("https://enviosms.com.mx/api/v1/sms/APIKEY/APISECRET");
 String postData =  "{\"to\":\"NUMERO\", \"text\":\"MENSAJE\"}";
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setDoOutput(true);
@@ -370,7 +370,7 @@ Content-Type: application/json
 
 ## Metodo POST - Enviar mensaje SMS Bulk
 
-http://api.enviosms.com.mx:8083/v1/sms/bulk/<b>apikey</b>/<b>apisecret/</b>
+https://enviosms.com.mx/api/v1/sms/bulk/<b>apikey</b>/<b>apisecret/</b>
 
 ### Descripción de parámetros de entrada
 Parámetro | Descripción
@@ -404,7 +404,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", "http://api.enviosms.com.mx__start_key__8083__end__/v1/sms/bulk/apikey/apisecret/");
+xhr.open("POST", "https://api.enviosms.com.mx/api/v1/sms/bulk/apikey/apisecret/");
 
 xhr.send(data);
 ```
@@ -415,8 +415,8 @@ PHP:
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_PORT => "8083",
-  CURLOPT_URL => "http://api.enviosms.com.mx:8083/v1/sms/bulk/APIKEY/APISECRET/",
+  //CURLOPT_PORT => "8083",
+  CURLOPT_URL => "https://api.enviosms.com.mx/api/v1/sms/bulk/APIKEY/APISECRET/",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -440,7 +440,7 @@ if ($err) {
 C# (Framework >=2.0) (Síncrono):
 ```c#
 //Este código funciona para Framework >=2.0
-var request = (HttpWebRequest)WebRequest.Create("http://api.enviosms.com.mx:8083/v1/sms/bulk/APIKEY/APISECRET/");
+var request = (HttpWebRequest)WebRequest.Create("https://enviosms.com.mx/api/v1/sms/bulk/APIKEY/APISECRET/");
 var postData = "{\"to\":\"NUMERO_CELULAR1,NUMERO_CELULAR2\", \"text\":\"MENSAJE\"}";           
 var data = Encoding.UTF8.GetBytes(postData);
 request.Method = WebRequestMethods.Http.Post;
@@ -460,7 +460,7 @@ C# (Framework >=4.6) (Asíncrono):
 ```c#
 //Este código funciona para Framework >=4.6
 string result = "";
-string url = "http://api.enviosms.com.mx:8083/v1/sms/bulk";
+string url = "https://enviosms.com.mx/api/v1/sms/bulk";
 string apik = "APIKEY";
 string apis = "APISECRET";
 string para = "NO_CELULAR1,NO_CELULAR2" //a 10 dígitos
@@ -481,7 +481,7 @@ var respuesta = await response.Content.ReadAsStringAsync();
 
 Java
 ```java
-URL url = new URL("http://api.enviosms.com.mx:8083/v1/sms/bulk/APIKEY/APISECRET/");
+URL url = new URL("https://enviosms.com.mx/api/v1/sms/bulk/APIKEY/APISECRET/");
 String postData =  "{\"to\":\"NUMERO1,NUMERO2\", \"text\":\"MENSAJE\"}";
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setDoOutput(true);
