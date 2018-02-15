@@ -368,7 +368,7 @@ Content-Type: application/json
 ```
 
 
-## Metodo POST - Enviar mensaje SMS Bulk
+## Metodo POST - Enviar mensaje SMS Bulk (BETA)
 
 https://enviosms.com.mx/api/v1/sms/bulk/<b>apikey</b>/<b>apisecret/</b>
 
