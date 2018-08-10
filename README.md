@@ -367,7 +367,37 @@ Content-Type: application/json
 }
 ```
 
+## Códigos de error
 
+### CÓDIGOS EXITOSOS
+Código | Descripción
+--- | --- 
+1000 | Operación exitosa
+1001 | Operación con cagargo realizada exitosamente
+1002 | Autenticación exitosa
+1003 | Envío parcialmente exitoso
+
+### CÓDIGOS DE ERROR RESPUESTA HTTP
+Código | Descripción| Causas
+--- | --- | --- 
+400 | Petición mal formada o error desconocido | Error interno inesperado
+401 | No Autorizado | APIK o APIS incorrectos, Permisos insuficientes
+402 | Pago Requerido | Saldo  insuficiente
+404 | Recurso no encontrado | URL incorrecta
+
+### CÓDIGOS DE ERROR JSON
+Código | Descripción
+--- | --- 
+4000 | Error desconocido
+4001 | La longitud del parametro es incorrecta
+4002 | Credenciales inválidas
+4004 | Permisos insuficientes
+4005 | Recursos insuficientes
+4007 | Nivel insuficiente
+4010 | El número de teléfono no es válido
+4011 | No se recibió JSON del mensaje
+4012 | Error el envío debido a saturación del servidor(falta de puertos)
+4020 | No se pueden enviar acentos con estas configuraciones
 
 ### Ejemplos en vivo
 [Ir a la página principal del servicio](http://enviosms.com.mx)
