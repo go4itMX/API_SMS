@@ -214,9 +214,9 @@ Content-Type: application/json
 
 ## Metodo POST - Enviar mensaje SMS
 
-https://enviosms.com.mx/api/v1/sms/<b>apikey</b>/<b>apisecret</b>
-<b>Nota Importante:</b>Si se requiere enviar una URL es necesario solicitar su autorización antes de enviar el mensaje, de lo contrario este será rechazado.</br>
-<b>Nota Importante 2:</b>Tenemos un catálogo de palabras bloqueadas y cualquier mensaje que contenga estas palabras será rechazado. Este puede cambiar sin previo aviso y actualmente las palabras bloqueadas son: Amlo,pri,pan,prd y donativo.</br>
+https://enviosms.com.mx/api/v1/sms/<b>apikey</b>/<b>apisecret</b></br>
+<b>Nota Importante:</b> Si se requiere enviar una URL es necesario solicitar su autorización antes de enviar el mensaje, de lo contrario este será rechazado.</br>
+<b>Nota Importante 2:</b> Tenemos un catálogo de palabras bloqueadas y cualquier mensaje que contenga estas palabras será rechazado. Este puede cambiar sin previo aviso y actualmente las palabras bloqueadas son: Amlo,pri,pan,prd y donativo.</br>
 ### Descripción de parámetros de entrada
 Parámetro | Descripción | Valor Default
 --- | --- | ---
