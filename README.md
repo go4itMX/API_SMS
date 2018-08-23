@@ -218,7 +218,7 @@ https://enviosms.com.mx/api/v1/sms/<b>apikey</b>/<b>apisecret</b>
 
 ### Descripción de parámetros de entrada
 Parámetro | Descripción | Valor Default
---- | ---
+--- | --- | ---
 apikey | API Key | Obligatorio (sin valor default)
 apisecret | API Secret | Obligatorio (sin valor default)
 to | Numero destino | Obligatorio (sin valor default)
