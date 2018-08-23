@@ -403,7 +403,9 @@ Código | Descripción
 4010 | El número de teléfono no es válido
 4011 | No se recibió JSON del mensaje
 4012 | Error el envío debido a saturación del servidor(falta de puertos)
-4020 | No se pueden enviar acentos con estas configuraciones
+4021 | No se pueden enviar mensajes que contengan palabras bloqueadas
+4022 | No se pueden enviar mensajes que contengan urls no autorizadas
+4023 | No se pueden enviar mensajes flash con ligas ni con algunos caracteres especiales.
 
 ### Ejemplos en vivo
 [Ir a la página principal del servicio](http://enviosms.com.mx)
