@@ -230,6 +230,7 @@ https://enviosms.com.mx/api/v1/sms/<b>apikey</b>/<b>apisecret</b></br>
 
 <b>Nota Importante:</b> Si se requiere enviar una URL es necesario solicitar su autorización antes de enviar el mensaje, de lo contrario este será rechazado.</br>
 <b>Nota Importante 2:</b> Tenemos un catálogo de palabras bloqueadas y cualquier mensaje que contenga estas palabras será rechazado. Este puede cambiar sin previo aviso y actualmente las palabras bloqueadas son: amlo, voto, nazi, chinga, pri, prd, epn, aria, hitler, 22826230, 018008010212, donativo, 2212751296, 221-275-1296, u.to, http://www.serbiafashion.com/css/redirect.html, www.serbiafashion.com, meade, anaya, bronco, 5521940373, 782533, S9, votaciones, votar, vota, casilla, m0rena, pr1, p@n, moren@, prl, aml0, @naya, @n@y@, 3pn, votacion, v0to, v0t0, vot@, vot@r, findmyiph, findmyiphone, findmyifone, findmyiphonemx, AppIe, iSupport, App1e, findmyiphonb, lphone, en-us.cf, findmyiphone-location, www.Apple.soportesms.com/contacto, icloudsig.com, icloudsig, icloudsignld.com y icloudsignld.</br>
+La zona horaría UTC y su equivalencia en México se puede consultar en el siguiente link: https://www.timeanddate.com/worldclock/converted.html?p1=0&p2=155. </br>
 ### Descripción de parámetros de entrada
 Parámetro | Descripción | Valor Default
 --- | --- | ---
