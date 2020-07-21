@@ -237,7 +237,7 @@ apikey | API Key | Obligatorio (sin valor default)
 apisecret | API Secret | Obligatorio (sin valor default)
 to | Numero destino | Obligatorio (sin valor default)
 text | Texto del mensaje (Max 509 caracteres) | Obligatorio (sin valor default)
-fechaHoraEnvio | Dia y hora en la cual se quiere enviar el mensaje | Hora actual
+fechaHoraEnvio | Dia y hora en la cual se quiere enviar el mensaje (Zona horaria UTC - Coordinated Universal Time) | Hora actual
 conAcento | Bandera que indica si se quiere enviar un mensaje con acentos (solo 70 caracteres por SMS) | 0/False
 flash | Bandera que indica si el sms se quiere enviar en modo flash. En este modo no se pueden enviar urls ni caracteres especiales | 0/False
 
@@ -251,7 +251,7 @@ Nombre | Valor | Tipo de dato
 --- | --- | ---
 to | Número a 10 dígitos | string
 text | Texto SMS | string
-fechaHoraEnvio  (opcional)| Dia y hora para programar el envío | Datetime
+fechaHoraEnvio  (opcional)| Dia y hora para programar el envío (Zona horaria UTC - Coordinated Universal Time) | Datetime
 conAcento (opcional) | True/False | Boolean
 flash (opcional) | True/False | Boolean
 
