@@ -4,10 +4,10 @@ Manual técnico para la integración del servicio de SMS a cualquier sistema inf
 
 ## Metodo GET - Autenticación de usuario
 
-Ambiente alta disponibilidad:
+URL:
 https://sms.api4it.com/v1/auth/<b>usuario</b>/<b>password</b>
 
-Legacy:
+URL Legacy:
 https://enviosms.com.mx/api/v1/auth/<b>usuario</b>/<b>password</b>
 
 ### Descripción de parámetros de entrada
@@ -108,10 +108,10 @@ Content-Type: application/json
 ```
 ## Metodo GET - Obtener datos de usuario
 
-Ambiente alta disponibilidad:
+URL:
 https://sms.api4it.com/v1/user/<b>token</b>
 
-Legacy:
+URL Legacy:
 http://enviosms.com.mx/api/v1/user/<b>token</b>
 
 ### Descripción de parámetros de entrada
@@ -222,10 +222,10 @@ Content-Type: application/json
 
 ## Metodo POST - Enviar mensaje SMS
 
-Ambiente alta disponibilidad:
+URL:
 https://sms.api4it.com/v1/sms/<b>apikey</b>/<b>apisecret</b>
 
-Legacy:
+URL Legacy:
 https://enviosms.com.mx/api/v1/sms/<b>apikey</b>/<b>apisecret</b></br>
 
 <b>Nota Importante:</b> Si se requiere enviar una URL es necesario solicitar su autorización antes de enviar el mensaje, de lo contrario este será rechazado.</br>
